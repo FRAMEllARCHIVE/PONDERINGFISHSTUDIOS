@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>THOMAS DE BEER</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(4.4);
+            font-size: 3rem;
+            color: white;
+            cursor: pointer;
+            z-index: 1;
+            opacity: 0.11;
+        }
+
+        .image-visible {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        img {
+            display: none;
+        }
+
+.⧉ {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    opacity: 0.16;
+    letter-spacing: 4.4px;
+    top: calc(85.6% - 26px);
+}
+
+.email-address {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    opacity: 0.22;
+    letter-spacing: 7.8px;
+    text-align: center;
+    top: 86%;
+}
+    </style>
+</head>
+<body>
+    <div class="play-button" id="playButton">&#9658;</div>
+
+    <img src="▶.webp" id="playImage">
+
+    <audio loop id="audio">
+        <source src="▶.mp3" type="audio/mp3">
+    </audio>
+    <div class="⧉">THOMAS JOHN-MICHAEL DE BEER</div>
+    <div class="email-address">PONDERINGFISHSTUDIOS@GMAIL.COM</div>
+    <script>
+        const playButton = document.getElementById('playButton');
+        const playImage = document.getElementById('playImage');
+        const audio = document.getElementById('audio');
+ 
+        let volume = 1.0;
+
+        playButton.addEventListener('click', function () {
+            playButton.style.display = 'none';
+            playImage.style.display = 'block';
+
+            audio.play();
+            
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    console.error(`Error attempting to enable full-screen mode: ${err.message}`);
+                });
+            } else {
+                document.exitFullscreen();
+            }
+        });
+
+        window.addEventListener('wheel', function(event) {
+            if (event.deltaY > 0) {
+                volume -= 0.1;
+            } else {
+                volume += 0.1;
+            }
+
+            volume = Math.max(0, Math.min(1, volume));
+            audio.volume = volume;
+            console.log(`Volume: ${volume.toFixed(1)}`);
+        });
+    </script>
+</body>
+</html>
