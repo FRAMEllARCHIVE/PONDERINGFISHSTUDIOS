@@ -59,18 +59,29 @@
     text-align: center;
     top: 86%;
 }
+        @media (max-width: 768px) {
+            .⧉ {
+                font-size: 1rem;
+            }
+
+            .email-address {
+                font-size: 0.7rem;
+                letter-spacing: 4px;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="play-button" id="playButton">&#9658;</div>
-
     <img src="▶.webp" id="playImage">
 
     <audio loop id="audio">
         <source src="▶.mp3" type="audio/mp3">
     </audio>
+
     <div class="⧉">THOMAS JOHN-MICHAEL DE BEER</div>
-    <div class="email-address">PONDERINGFISHSTUDIOS@GMAIL.COM</div>
+    <div class="email-address" id="emailButton">PONDERINGFISHSTUDIOS@GMAIL.COM</div>
+
     <script>
         const playButton = document.getElementById('playButton');
         const playImage = document.getElementById('playImage');
@@ -104,6 +115,26 @@
             audio.volume = volume;
             console.log(`Volume: ${volume.toFixed(1)}`);
         });
+
+const emailButton = document.getElementById('emailButton');
+const emailAddressToCopy = "ponderingfishstudios@gmail.com";
+
+emailButton.addEventListener('click', function () {
+
+    emailButton.style.opacity = 0.55;
+
+    const emailText = emailAddressToCopy;
+    const textarea = document.createElement('textarea');
+    textarea.value = emailText;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    document.body.removeChild(textarea);
+
+    setTimeout(function () {
+        emailButton.style.opacity = 0.22;
+    }, 8888);
+});
     </script>
 </body>
 </html>
