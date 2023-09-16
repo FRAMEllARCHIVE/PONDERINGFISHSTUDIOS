@@ -35,7 +35,7 @@
             display: none;
         }
 
-.⧉ {
+.name {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -59,18 +59,16 @@
     text-align: center;
     top: 86%;
 }
-@media (max-width: 768px) {
-    .⧉ {
-        font-size: 0.6rem;
-        letter-spacing: 1px; /* Adjust as needed */
-    }
+        @media (max-width: 768px) {
+            .name {
+                font-size: 0.6rem;
+            }
 
-    .email-address {
-        font-size: 0.6rem;
-        letter-spacing: 3px; /* Adjust as needed */
-    }
-}
-
+            .email-address {
+                font-size: 0.6rem;
+                letter-spacing: 3px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -81,8 +79,8 @@
         <source src="▶.mp3" type="audio/mp3">
     </audio>
 
-    <div class="⧉">THOMAS JOHN-MICHAEL DE BEER</div>
-    <div class="email-address" id="emailButton">1ONDERINGFISHSTUDIOS@GMAIL.COM</div>
+    <div class="name">THOMAS JOHN-MICHAEL DE BEER</div>
+    <div class="email-address" id="emailButton">PONDERINGFISHSTUDIOS@GMAIL.COM</div>
 
     <script>
         const playButton = document.getElementById('playButton');
