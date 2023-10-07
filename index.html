@@ -56,13 +56,13 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    font-size: 1.6rem;
+    font-size: 3.2rem;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     opacity: 0.16;
     letter-spacing: 3px;
-    top: calc(86% - 28px);
-    transition: opacity 2.2s ease-in-out, visibility 0s 1s;
+    top: 80%;
+    transition: opacity 3.2s ease-in-out, visibility 0s 1s;
     user-select: none;
 }
 
@@ -76,21 +76,20 @@
     opacity: 0.22;
     letter-spacing: 5px;
     text-align: center;
-    top: 86%;
+    top: 88%;
     transition: opacity 2.2s ease-in-out, visibility 0s 1s;
     user-select: none;
 }
         @media (max-width: 768px) {
             .name {
-                font-size: 0.6rem;
-                letter-spacing: 2px;
-                top: calc(82% - 16px);
+                font-size: 1.6rem;
+                letter-spacing: 1px;
+    top: 82%;
             }
 
             .email-address {
                 font-size: 0.6rem;
                 letter-spacing: 2px;
-                top: 82%;
             }
         }
 .name:hover {
@@ -99,6 +98,7 @@
 }
 
 .email-address:hover {
+    top: 88%;
     opacity: 0.4;
     transition: opacity 1.1s ease-in-out;
 }
@@ -117,11 +117,11 @@
     <img src="▶.webp" id="playImage" draggable="false">
 
 
-    <audio preload="auto" loop id="audio">
+    <audio loop id="audio">
         <source src="2.mp3" type="audio/mp3">
     </audio>
 
-    <div class="name">THOMAS JOHN-MICHAEL DE BEER</div>
+    <div class="name">THOMAS DE BEER</div>
     <div class="email-address" id="emailButton">PONDERINGFISHSTUDIOS@GMAIL.COM</div>
 
     <script>
