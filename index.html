@@ -17,11 +17,113 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 80%;
-    height: 80%;
+    width: 44%;
+    height: 44%;
     background: transparent;
     pointer-events: none;
 }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(3);
+            font-size: 3rem;
+            color: white;
+            cursor: pointer;
+            z-index: 1;
+            opacity: 0.11;
+            transition: opacity 2.2s ease-in-out, visibility 0s 1s;
+            user-select: none;
+        }
+
+.play-button:hover {
+    opacity: 1;
+    transition: opacity 2.2s ease-in-out;
+}
+
+        .image-visible {
+            display: block;
+            max-width: 52%;
+            max-height: 52%;
+        }
+
+        img {
+            display: none;
+        }
+
+.name {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3.7rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: white;
+    opacity: 0.16;
+    letter-spacing: 3px;
+    top: calc(91% - 69px);
+    transition: opacity 3.2s ease-in-out, visibility 0s 1s;
+    user-select: none;
+}
+
+.name:hover {
+    opacity: 0.6;
+    transition: opacity 2.1s ease-in-out;
+}
+.email-address {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.4rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    opacity: 0.22;
+    letter-spacing: 5px;
+    text-align: center;
+    top: calc(91% + 22px);
+    transition: opacity 2.2s ease-in-out, visibility 0s 1s;
+    user-select: none;
+}
+
+.email-address:hover {
+    opacity: 0.4;
+    transition: opacity 1.1s ease-in-out;
+}
+
+        .section-button {
+            position: absolute;
+            font-size: 0.8rem;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            opacity: 0.2;
+            letter-spacing: 1px;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+            transition: opacity 1.3s ease-in-out;
+        }
+        .section-button:hover {
+            opacity: 1;
+        }
+        .illustration-button {
+            top: 91%;
+    left: calc(50% - 294px);
+        }
+        .web-design-button {
+            top: 91%;
+    left: calc(50% - 174px);
+        }
+        .app-development-button {
+            top: 91%;
+    left: calc(50% - 65px);
+        }
+        .creative-writing-button {
+            top: 91%;
+    left: calc(50% + 135px);
+        }
+
+@media (max-width: 888px) {
 
         .play-button {
             position: absolute;
@@ -55,117 +157,16 @@
 .name {
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
-    font-size: 3.3rem;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    color: white;
-    opacity: 0.16;
-    letter-spacing: 3px;
-    top: calc(92% - 62px);
-    transition: opacity 3.2s ease-in-out, visibility 0s 1s;
-    user-select: none;
-}
-
-.name:hover {
-    opacity: 0.6;
-    transition: opacity 2.1s ease-in-out;
-}
-.email-address {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    opacity: 0.22;
-    letter-spacing: 5px;
-    text-align: center;
-    top: calc(92% + 19px);
-    transition: opacity 2.2s ease-in-out, visibility 0s 1s;
-    user-select: none;
-}
-
-.email-address:hover {
-    opacity: 0.4;
-    transition: opacity 1.1s ease-in-out;
-}
-
-        .section-button {
-            position: absolute;
-            font-size: 0.7rem;
-            font-family: Arial, Helvetica, sans-serif;
-            color: white;
-            opacity: 0.2;
-            letter-spacing: 1px;
-            text-align: center;
-            cursor: pointer;
-            user-select: none;
-            transition: opacity 1.3s ease-in-out;
-        }
-        .section-button:hover {
-            opacity: 1;
-        }
-        .illustration-button {
-            top: 92%;
-    left: calc(50% - 266px);
-        }
-        .web-design-button {
-            top: 92%;
-    left: calc(50% - 163px);
-        }
-        .app-development-button {
-            top: 92%;
-    left: calc(50% - 69px);
-        }
-        .creative-writing-button {
-            top: 92%;
-    left: calc(50% + 127px);
-        }
-
-@media (max-width: 666px) {
-
-        .play-button {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%) scale(3);
-            font-size: 3rem;
-            color: white;
-            cursor: pointer;
-            z-index: 1;
-            opacity: 0.11;
-            transition: opacity 2.2s ease-in-out, visibility 0s 1s;
-            user-select: none;
-        }
-
-.play-button:hover {
-    opacity: 1;
-    transition: opacity 2.2s ease-in-out;
-}
-
-        .image-visible {
-            display: block;
-            max-width: 66%;
-            max-height: 66%;
-        }
-
-        img {
-            display: none;
-        }
-
-.name {
-    position: absolute;
-    left: 50%;
-    font-size: 1.35rem;
+    font-size: 4.4rem;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     opacity: 0.36;
     letter-spacing: 2px;
-    line-height: 0.9;
-    top: calc(93% - 133px);
+    line-height: 1.1;
+    top: calc(11% - 1px);
     transition: opacity 3.2s ease-in-out, visibility 0s 1s;
     user-select: none;
+     text-align: center;
 }
 
 .name:hover {
@@ -182,7 +183,7 @@
     opacity: 0.42;
     letter-spacing: 3px;
     text-align: center;
-    top: calc(93% + 0px);
+    top: 88%;
     transition: opacity 2.2s ease-in-out, visibility 0s 1s;
     user-select: none;
 }
@@ -197,7 +198,7 @@
             font-size: 1rem;
             font-family: Arial, Helvetica, sans-serif;
             color: white;
-            opacity: 0.3;
+            opacity: 0;
             letter-spacing: 1px;
             text-align: center;
             cursor: pointer;
@@ -206,25 +207,7 @@ transform: translateX(-50%);
             transition: opacity 1.3s ease-in-out;
         }
         .section-button:hover {
-            opacity: 0.8;
-        }
-        .illustration-button {
-    top: calc(93% - 100px);
-    left: calc(50% - 69px);
-        }
-        .web-design-button {
-    top: calc(93% - 100px);
-    left: calc(50% + 73px);
-        }
-        .app-development-button {
-            font-size: 0.8rem;
-    top: calc(93% - 70px);
-    left: 50%;
-        }
-        .creative-writing-button {
-    top: calc(93% - 40px);
-    left: 50%;
-        }
+            opacity: 0;
 
     </style>
 
@@ -236,14 +219,14 @@ transform: translateX(-50%);
     <img src="▶.webp" id="playImage" draggable="false">
 
     <audio preload="auto" loop id="audio">
-        <source src="2.mp3" type="audio/mp3">
+        <source src="▶.mp3" type="audio/mp3">
     </audio>
 
     <div class="name">THOMAS DE BEER</div>
     <div class="email-address" id="emailButton">PONDERINGFISHSTUDIOS@GMAIL.COM</div>
     <div class="section-button illustration-button">| ILLUSTRATION |</div>
     <div class="section-button web-design-button">| WEB DESIGN |</div>
-    <div class="section-button app-development-button">| APPLICATION DEVELOPMENT |</div>
+    <div class="section-button app-development-button">| CODING & DEVELOPMENT |</div>
     <div class="section-button creative-writing-button">| CREATIVE WRITING |</div>
 
     <script>
