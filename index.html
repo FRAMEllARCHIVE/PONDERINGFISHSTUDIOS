@@ -140,18 +140,13 @@ opacity:0.8;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(0.1);
+  transform: translate(-50%, -50%);
   color: white;
   cursor: pointer;
   z-index: 3;
-  opacity: 0.5;
+  opacity: 1;
   transition: opacity 2.2s ease-in-out, visibility 0s 1s;
   user-select: none;
-}
-
-.play-button:hover {
-    opacity: 1;
-    transition: opacity 2.2s ease-in-out;
 }
 
 #black-screen {
@@ -174,7 +169,7 @@ opacity:0.8;
 
 
 <div class="play-button" id="playButton">
-    <img src="play.png" alt="Play button" onclick="enterFullscreenAndLockOrientation()">
+    <img src="play.webp" alt="Play button" onclick="enterFullscreenAndLockOrientation()">
 </div>
 
     <audio preload="auto" loop id="audio">
