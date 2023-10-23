@@ -137,12 +137,12 @@ opacity:0.8;
 }
 
 .play-button {
-  position: absolute;
+  position: fixed;
+  width: 200px;
+  height: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 188px;
-  height: auto;
   z-index: 3;
 }
 
@@ -168,7 +168,6 @@ opacity:0.8;
 <body>
 
 <div id="black-screen"></div>
-
 
 <div class="play-button" id="playButton">
     <img src="play.webp" alt="Play button" onclick="enterFullscreenAndLockOrientation()">
