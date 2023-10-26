@@ -340,7 +340,7 @@ opacity: 0.6;
             <input type="radio" name="slide" id="c6">
             <label for="c6" class="card">
                 <div class="row">
-                    <div class="icon">7</div>
+                    <div class="icon">6</div>
                     <div class="description">
                         <h4>PROJECTS</h4>
                         <p></p>
@@ -359,6 +359,18 @@ opacity: 0.6;
 </body>
 
     <script>
+
+const c6RadioButton = document.getElementById("c6");
+
+c6RadioButton.addEventListener("click", chooseRandomCard);
+
+  function chooseRandomCard() {
+    const randomCardNumber = Math.floor(Math.random() * 17) + 6;
+    const randomCardFilename = `${randomCardNumber}.webp`;
+    const cardElement = document.querySelector(".card[for='c6']");
+    cardElement.style.backgroundImage = `url('./${randomCardFilename}')`;
+}
+
         const playButton = document.getElementById('playButton');
         const audio = document.getElementById('audio');
  
