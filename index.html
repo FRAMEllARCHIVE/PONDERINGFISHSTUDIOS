@@ -27,9 +27,9 @@
 
         .container {
         user-select: none;
--webkit-tap-highlight-color: transparent;
+        -webkit-tap-highlight-color: transparent;
             height: 66%;
-width: 96%;
+        width: 96%;
             display: flex;
             flex-wrap: nowrap;
             justify-content: center;
@@ -37,7 +37,7 @@ width: 96%;
 
         .card {
         user-select: none;
--webkit-tap-highlight-color: transparent;
+        -webkit-tap-highlight-color: transparent;
             width: 169px;
             border-radius: .55rem;
             background-size: cover;
@@ -84,7 +84,7 @@ width: 96%;
 
         .description p {
             color: white;
-opacity:0.66;
+            opacity:0.66;
             padding-top: 4px;
     transition: opacity 1.1s ease-in-out;
         }
@@ -210,6 +210,10 @@ opacity: 0.6;
             transition: all 3.3s ease;
 }
 
+.transition {
+    transition: filter 2s ease;
+}
+
     </style>
     <title>THOMAS DE BEER</title>
 </head>
@@ -230,7 +234,7 @@ opacity: 0.6;
     <div class="email-address" id="emailButton">PONDERINGFISHSTUDIOS@GMAIL.COM</div>
 
 <div class="DONATE" id="DONATE">
-    <a href="https://www.paypal.com/donate/?hosted_button_id=QQ89543ABDLAS" class="custom-link" target="_blank">
+    <a href="https://framellarchive.github.io/llll/" class="custom-link" target="_blank">
         <img src="frame.png" alt="DONATE">
     </a>
 </div>
@@ -331,7 +335,7 @@ opacity: 0.6;
                     <div class="icon">5</div>
                     <div class="description">
                         <h4>Thomas de beer</h4>
-                        <p>DESIGN</p>
+                            <p id="role" class="transition">ARCHIVIST</p>
                         <p></p>
                         <p></p>
                         <p></p>
@@ -384,6 +388,22 @@ opacity: 0.6;
 </body>
 
     <script>
+
+    var roles = ["ARCHIVIST", "DESIGNER", "ILLUSTRATOR", "SOFTWARE ENGINEER", "WEB DEVELOPER", "DIGITAL TUTOR", "GOOGLE DEVELOPER", "DIGITAL ARCHITECT", "ARTIST", "FREELANCER", "PUBLISHER", "TECHNICAL WRITER", "CREATIVE WRITER", "MATHEMATICIAN", "CONSULTANT", "OPTIMISATION ANALYST"];
+    var roleIndex = 0;
+    var transitionClass = "transition";
+
+    function rotateRoles() {
+        var roleElement = document.getElementById("role");
+        roleElement.classList.remove(transitionClass);
+        setTimeout(function() {
+            roleElement.innerHTML = roles[roleIndex];
+            roleIndex = (roleIndex + 1) % roles.length;
+            roleElement.classList.add(transitionClass);
+        }, 50);
+    }
+
+    setInterval(rotateRoles, 4444);
 
 const c6RadioButton = document.getElementById("c6");
 
